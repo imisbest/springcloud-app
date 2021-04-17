@@ -1,0 +1,12 @@
+server:
+  port: 8760
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8760/eureka/
+    fetch-registry: false
+    register-with-eureka: false
+spring:
+  application:
+    name: springcloud-app-server
+####################################################

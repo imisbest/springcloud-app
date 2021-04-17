@@ -1,0 +1,49 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8760/eureka/
+feign:
+  httpclient:
+    enabled: true
+#################################################
+# �������������
+server:
+  port: 8772
+  servlet:
+    #context-path: /cmfz
+    jsp:
+      init-parameters:
+        development: true
+# spring�������
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 111
+    url: jdbc:mysql://106.13.236.137:3306/app?characterEncoding=UTF-8
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /
+  redis:
+    host: 106.13.236.137
+    port: 7000
+    database: 0
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 100MB
+      ############################################
+  application:
+    name: springcloud-app-master
+# mybatis�������
+mybatis:
+  type-aliases-package: com.csw.entity
+  mapper-locations: classpath:com/csw/mapper/*Mapper.xml
+# ��־
+logging:
+  level:
+    com.csw.dao: debug
+
+
